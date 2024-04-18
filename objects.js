@@ -77,16 +77,11 @@ console.log(bestStudent(students));
       //console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
     //},
   //};
-function addNewMethod(car){
-   car.age = function(){
-    const currentYear = new Date().getFullYear();
-    return currentYear - car.year;
-   }
-
-   return car;
-
-};
-const car = {
+  function carNewAge(car){
+    car["age"]=(2024-car.year)
+    console.log(car)
+  }
+  const car = {
     make: 'Ford',
     model: 'Ranger',
     year: 2023,
@@ -94,7 +89,5 @@ const car = {
       console.log(`Make: ${this.make}, Model: ${this.model}, Year: ${this.year}`);
     },
   };
-
-const updateCar = addNewMethod(car)
-console.log(updateCar.age())
+carNewAge(car)
  
